@@ -28,22 +28,22 @@ public class HomePage extends AppCompatActivity {
                 new Category(
                         1,
                         "Depression",
-                        "http://placehold.it/120x120&text=saurabh"));
+                        "https://wallpaperaccess.com/full/432474.png"));
         categoryList.add(
                 new Category(
                         2,
                         "Anxiety",
-                        "http://placehold.it/120x120&text=saurabh"));
+                        "https://wallpaperaccess.com/full/432474.png"));
         categoryList.add(
                 new Category(
                         3,
                         "Happy",
-                        "http://placehold.it/120x120&text=saurabh"));
+                        "https://wallpaperaccess.com/full/432474.png"));
         categoryList.add(
                 new Category(
                         4,
                         "Lonely",
-                        "http://placehold.it/120x120&text=saurabh"));
+                        "https://wallpaperaccess.com/full/432474.png"));
 
 
         CategoryAdapter adapter=new CategoryAdapter(this,categoryList);
