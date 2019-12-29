@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "324878238780",
+    "firebase_url": "https://yourmeditationguru-885f4.firebaseio.com",
+    "project_id": "yourmeditationguru-885f4",
+    "storage_bucket": "yourmeditationguru-885f4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:324878238780:android:838ebcc2558a2e2a446f39",
+        "android_client_info": {
+          "package_name": "com.yourmeditationguru.saurabhthesuperhero.yourmeditationguru"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "324878238780-gint4dltpuk7587v0eqkg4itgudkin7m.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.yourmeditationguru.saurabhthesuperhero.yourmeditationguru",
+            "certificate_hash": "c16567cee462ec3c047c07b608b65ccc7f1eea83"
+          }
+        },
+        {
+          "client_id": "324878238780-sav44sedd73urkpq0u767e99vb1881mh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC0WttnHPpcVaQWrQBo9qCgtCGVIGuGknQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "324878238780-sav44sedd73urkpq0u767e99vb1881mh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
