@@ -1,7 +1,9 @@
 package com.yourmeditationguru.saurabhthesuperhero.yourmeditationguru;
 
 import android.content.Context;
+import android.content.Intent;
 import android.net.Uri;
+import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+import com.yourmeditationguru.saurabhthesuperhero.SecondActivity;
 
 import java.util.ArrayList;
 
@@ -38,10 +41,21 @@ public class musicListAdapter extends RecyclerView.Adapter<musicListAdapter.MyVi
 
 
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.itemname.setText((Integer) personNames.get(position));
+        holder.itemname.setText((CharSequence) personNames.get(position));
         Picasso.with(context)
-                .load((Uri) personImages.get(position))
+                .load((String) personImages.get(position))
                 .into(holder.itemimage);
+
+
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // open another activity on item click
+                Intent intent = new Intent(context, SecondActivity.class);
+                intent.putExtra("image", (String) personImages.get(position)); // put image data in Intent
+                context.startActivity(intent); // start Intent
+            }
+        });
     }
 
 
