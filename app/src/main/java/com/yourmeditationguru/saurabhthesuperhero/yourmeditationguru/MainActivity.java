@@ -13,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void accesslogin(View view) {
-        Intent intent =new Intent(this,MediList.class);
+        Intent intent =new Intent(this,LogInActivity.class);
         startActivity(intent);
     }
 }
