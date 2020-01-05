@@ -23,7 +23,10 @@ public class MediList extends AppCompatActivity {
 
     ArrayList Musictitle = new ArrayList<String>();
     ArrayList MusicImage = new ArrayList<>();
-//    ArrayList personNames = new ArrayList<>(Arrays.asList("Person 1", "Person 2", "Person 3", "Person 4", "Person 5", "Person 6", "Person 7","Person 8", "Person 9", "Person 10", "Person 11", "Person 12", "Person 13", "Person 14"));
+    ArrayList Musicdescr = new ArrayList<>();
+    ArrayList Musicurl = new ArrayList<>();
+
+    //    ArrayList personNames = new ArrayList<>(Arrays.asList("Person 1", "Person 2", "Person 3", "Person 4", "Person 5", "Person 6", "Person 7","Person 8", "Person 9", "Person 10", "Person 11", "Person 12", "Person 13", "Person 14"));
 //    ArrayList personImages = new ArrayList<>(Arrays.asList("https://bit.ly/2ZvQdGq",
 //            "https://bit.ly/2ZvQdGq","https://bit.ly/2ZvQdGq","https://bit.ly/2ZvQdGq",
 //            "https://bit.ly/2ZvQdGq","https://bit.ly/2ZvQdGq","https://bit.ly/2ZvQdGq",
@@ -56,8 +59,10 @@ public class MediList extends AppCompatActivity {
                             {
                                 String name = (String) messageSnapshot.child("Name").getValue();
                                 String imgurl = (String) messageSnapshot.child("ImageUrl").getValue();
+                                String mdescr = (String) messageSnapshot.child("Description").getValue();
+                                String musicurl = (String) messageSnapshot.child("MusicUrl").getValue();
 
-                                useValue(name,imgurl);
+                                useValue(name,imgurl,mdescr,musicurl);
 
                             }
                             //System.out.println(name+imgurl);
@@ -88,7 +93,7 @@ public class MediList extends AppCompatActivity {
                     GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(),2);
                     recyclerView.setLayoutManager(gridLayoutManager); // set LayoutManager to RecyclerView
                     //  call the constructor of CustomAdapter to send the reference and data to Adapter
-                    musicListAdapter customAdapter = new musicListAdapter(MediList.this, Musictitle,MusicImage);
+                    musicListAdapter customAdapter = new musicListAdapter(MediList.this, Musictitle,MusicImage,Musicdescr,Musicurl);
                     recyclerView.setAdapter(customAdapter);
 
                 }else
@@ -99,10 +104,12 @@ public class MediList extends AppCompatActivity {
 
     }
 
-    private void useValue(String name, String imgurl)
+    private void useValue(String name, String imgurl, String mdescr, String musicurl)
     {
         Musictitle.add(name);
         MusicImage.add(imgurl);
+        Musicdescr.add(mdescr);
+        Musicurl.add(musicurl);
 
     }
 

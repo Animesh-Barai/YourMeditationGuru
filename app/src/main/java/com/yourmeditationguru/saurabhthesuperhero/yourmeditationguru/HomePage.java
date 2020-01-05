@@ -33,17 +33,17 @@ public class HomePage extends AppCompatActivity {
                 new Category(
                         2,
                         "Anxiety",
-                        "https://wallpaperaccess.com/full/432474.png"));
+                        "https://i.pinimg.com/564x/40/50/05/40500504bafdb491db29769cc90f5f9b.jpg"));
         categoryList.add(
                 new Category(
                         3,
                         "Happy",
-                        "https://wallpaperaccess.com/full/432474.png"));
+                        "https://i.pinimg.com/564x/27/1d/18/271d1863de5a7e0a88b5c8023c61dc01.jpg"));
         categoryList.add(
                 new Category(
                         4,
                         "Lonely",
-                        "https://wallpaperaccess.com/full/432474.png"));
+                        "https://i.pinimg.com/564x/9a/48/75/9a487581cc961620e461aa060c202db0.jpg"));
 
 
         CategoryAdapter adapter=new CategoryAdapter(this,categoryList);

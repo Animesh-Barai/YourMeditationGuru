@@ -19,11 +19,16 @@ public class musicListAdapter extends RecyclerView.Adapter<musicListAdapter.MyVi
 
     ArrayList personNames;
     ArrayList personImages;
+    ArrayList Mdescr;
+    ArrayList Murl;
+
     Context context;
 
-    public musicListAdapter( Context context,ArrayList personNames, ArrayList personImages) {
+    public musicListAdapter(Context context, ArrayList personNames, ArrayList personImages, ArrayList musicdescr, ArrayList musicurl) {
         this.personNames = personNames;
         this.personImages = personImages;
+        this.Mdescr=musicdescr;
+        this.Murl=musicurl;
         this.context = context;
     }
 
@@ -44,6 +49,8 @@ public class musicListAdapter extends RecyclerView.Adapter<musicListAdapter.MyVi
                 .into(holder.itemimage);
             String title= (String) personNames.get((position));
             String image= (String) personImages.get(position);
+        String descr= (String) Mdescr.get(position);
+        String murl= (String) Murl.get(position);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +60,8 @@ public class musicListAdapter extends RecyclerView.Adapter<musicListAdapter.MyVi
                 intent.putExtra("image", image);
                 // put image data in Intent
                 intent.putExtra("title", title);
+                intent.putExtra("descr", descr);
+                intent.putExtra("murl", murl);
                 context.startActivity(intent); // start Intent
             }
         });

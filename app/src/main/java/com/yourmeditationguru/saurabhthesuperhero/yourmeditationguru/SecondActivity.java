@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.method.ScrollingMovementMethod;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -23,6 +24,9 @@ public class SecondActivity extends AppCompatActivity {
         Intent intent = getIntent();
         String tracktitle = intent.getStringExtra("title");
         String trackimage = intent.getStringExtra("image");
+        String trackdescr = intent.getStringExtra("descr");
+        String trackurl = intent.getStringExtra("murl");
+
         imageView=(ImageView)findViewById(R.id.trackimg);
         title=(TextView)findViewById(R.id.tracktitle);
         descr=(TextView)findViewById(R.id.trackdescr);
@@ -31,7 +35,12 @@ public class SecondActivity extends AppCompatActivity {
                 .load((String)trackimage)
                 .into(imageView);
 
+        descr.setText(trackdescr);
         title.setText(tracktitle);
         descr.setMovementMethod(new ScrollingMovementMethod());
+    }
+
+    public void back(View view) {
+        finish();
     }
 }
