@@ -46,17 +46,18 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.Catego
 
           category=categoryList.get(position);
         holder.title.setText(category.getTitle());
-
+        String tttile=category.getTitle();
         Picasso.with(mCtx)
                 .load(category.getImgUrl())
                 .into(holder.img);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
+
             public void onClick(View view) {
                 // open another activity on item click
                 Intent intent = new Intent(mCtx, MediList.class);
-                intent.putExtra("id",  category.getTitle()); // put image data in Intent
+                intent.putExtra("id",  tttile); // put image data in Intent
                 mCtx.startActivity(intent); // start Intent
             }
         });
