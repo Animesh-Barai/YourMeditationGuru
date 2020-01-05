@@ -25,12 +25,13 @@ public class SecondActivity extends AppCompatActivity {
         String trackimage = intent.getStringExtra("image");
         imageView=(ImageView)findViewById(R.id.trackimg);
         title=(TextView)findViewById(R.id.tracktitle);
+        descr=(TextView)findViewById(R.id.trackdescr);
 
         Picasso.with(context)
                 .load((String)trackimage)
                 .into(imageView);
-        title.setMovementMethod(new ScrollingMovementMethod());
-        title.setText(tracktitle);
 
+        title.setText(tracktitle);
+        descr.setMovementMethod(new ScrollingMovementMethod());
     }
 }

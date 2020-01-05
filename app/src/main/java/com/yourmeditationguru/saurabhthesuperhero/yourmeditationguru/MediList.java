@@ -77,7 +77,7 @@ public class MediList extends AppCompatActivity {
 
 
         Handler handler=new Handler();
-        int delay=2000;
+        int delay=1000;
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
