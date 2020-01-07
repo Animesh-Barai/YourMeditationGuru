@@ -52,6 +52,8 @@ proident, sunt in culpa qui officia deserunt mollit anim id est laborum." />
         android:id="@+id/BeginSession"
         android:layout_width="match_parent"
         android:layout_height="160px"
+        android:onClick="openplayer"
+
         android:layout_margin="10dp"
         android:text="Begin Session"
         android:textAllCaps="false"

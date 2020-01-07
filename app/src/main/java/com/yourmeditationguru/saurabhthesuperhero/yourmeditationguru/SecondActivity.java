@@ -15,6 +15,7 @@ import com.yourmeditationguru.saurabhthesuperhero.yourmeditationguru.R;
 
 public class SecondActivity extends AppCompatActivity {
     Context context;
+    String tracktitle,trackdescr,trackimage,trackurl;
     ImageView imageView;
         TextView title,descr;
     @Override
@@ -22,10 +23,10 @@ public class SecondActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
         Intent intent = getIntent();
-        String tracktitle = intent.getStringExtra("title");
-        String trackimage = intent.getStringExtra("image");
-        String trackdescr = intent.getStringExtra("descr");
-        String trackurl = intent.getStringExtra("murl");
+        tracktitle = intent.getStringExtra("title");
+       trackimage = intent.getStringExtra("image");
+        trackdescr = intent.getStringExtra("descr");
+        trackurl = intent.getStringExtra("murl");
 
         imageView=(ImageView)findViewById(R.id.trackimg);
         title=(TextView)findViewById(R.id.tracktitle);
@@ -43,4 +44,24 @@ public class SecondActivity extends AppCompatActivity {
     public void back(View view) {
         finish();
     }
+
+    public void openplayer(View view) {
+        Intent intent = new Intent(this, Player.class);
+        intent.putExtra("image", trackimage);
+        // put image data in Intent
+        intent.putExtra("title", tracktitle);
+        intent.putExtra("murl", trackurl);
+        startActivity(intent); // start Intent
+
+    }
+
+//    public void openplayer(View view) {
+////
+//        Intent intent = new Intent(this, Player.class);
+//        intent.putExtra("image", trackimage);
+//        // put image data in Intent
+//        intent.putExtra("title", tracktitle);
+//        intent.putExtra("murl", trackurl);
+//        context.startActivity(intent); // start Intent
+//    }
 }
