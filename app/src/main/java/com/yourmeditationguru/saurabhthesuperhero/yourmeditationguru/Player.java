@@ -31,7 +31,7 @@ public class Player extends AppCompatActivity {
         cimage=(CircleImageView) findViewById(R.id.circleimage);
          image=(ImageView)findViewById(R.id.imageView5);
          title=(TextView)findViewById(R.id.title);
-        image=(ImageView)findViewById(R.id.play);
+        play=(ImageView)findViewById(R.id.play);
 
 
         Intent intent = getIntent();
