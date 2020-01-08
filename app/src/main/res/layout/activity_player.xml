@@ -33,20 +33,22 @@
         app:civ_border_width="5dp" />
 
     <ImageView
-        android:id="@+id/imageView6"
+        android:id="@+id/fwdbutton"
         android:layout_width="62dp"
         android:layout_height="82dp"
         android:layout_alignParentEnd="true"
         android:layout_centerVertical="true"
         android:layout_marginEnd="13dp"
+        android:onClick="fwdtrack"
         app:srcCompat="@drawable/fwdnew" />
 
     <ImageView
-        android:id="@+id/imageView7"
+        android:id="@+id/bwdbutton"
         android:layout_width="61dp"
         android:layout_height="143dp"
         android:layout_alignParentStart="true"
         android:layout_centerVertical="true"
+        android:onClick="bwdtrack"
         app:srcCompat="@drawable/bwdnew" />
 
     <TextView
